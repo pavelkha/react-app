@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
+import languagesArray from '../../assets/languages';
 import './Header.scss';
 
 const Header = () => {
   const [language, setLanguage] = useState('en');
-  const languagesArray = ['en', 'ru'];
+  const { t } = useTranslation();
 
   const changeLanguage = event => {
     const buttonLanguage = event.target.innerText.toLowerCase();
     if (buttonLanguage !== language) {
       setLanguage(buttonLanguage);
+      i18next.changeLanguage(buttonLanguage);
     };
   };
   
@@ -33,10 +37,10 @@ const Header = () => {
     <header className='header-wrapper'>
       <div className='header-flex-container'>
         <ul className='header-pages-list'>
-          <li>Home</li>
-          <li>page 1</li>
-          <li>page 2</li>
-          <li>page 3</li>
+          <li>{t('homePage')}</li>
+          <li>{t('page1')}</li>
+          <li>{t('page2')}</li>
+          <li>{t('page3')}</li>
         </ul>
         <ul className='header-languages-list'>
           {renderLanguageButtons()}

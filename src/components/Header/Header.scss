@@ -12,21 +12,56 @@
   background-color: beige;
 }
 
+.header-flex-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-pages-list {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-left: 3rem;
 
   li {
     display: inline;
 
     &:not(:last-child) {
-      margin-right: 1.5rem;
+      margin-right: 2rem;
     }
   }
+}
+
+.header-languages-list {
+  font-size: 0.8rem;
+  margin-left: 2rem;
+
+  li {
+    display: inline;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.header-language-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  &:hover {
+    background-color: burlywood;
+    transition: 0.8s;
+  }
+}
+
+.header-active-language-button {
+  font-weight: bold;
 }
 
 .header-title {
   margin-right: 1rem;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }

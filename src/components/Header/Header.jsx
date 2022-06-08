@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import languagesArray from '../../assets/languages';
@@ -37,10 +38,10 @@ const Header = () => {
     <header className='header-wrapper'>
       <div className='header-flex-container'>
         <ul className='header-pages-list'>
-          <li>{t('homePage')}</li>
-          <li>{t('page1')}</li>
-          <li>{t('page2')}</li>
-          <li>{t('page3')}</li>
+          <li><Link to='/'>{t('homePage')}</Link></li>
+          <li><Link to='/page1'>{t('page1')}</Link></li>
+          <li><Link to='/page2'>{t('page2')}</Link></li>
+          <li><Link to='/page3'>{t('page3')}</Link></li>
         </ul>
         <ul className='header-languages-list'>
           {renderLanguageButtons()}

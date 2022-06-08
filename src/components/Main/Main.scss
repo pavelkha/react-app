@@ -1,0 +1,13 @@
+@import '../../variables.scss';
+
+.main-wrapper {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: azure;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}

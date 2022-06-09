@@ -6,8 +6,14 @@ import languagesArray from '../../assets/languages';
 import './Header.scss';
 
 const Header = () => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(document.querySelector('html').lang);
   const { t } = useTranslation();
+  const pagesLinksArray = [
+    { path: '/', content: 'homePage' },
+    { path: '/page1', content: 'page1' },
+    { path: '/page2', content: 'page2' },
+    { path: '/page3', content: 'page3' },
+  ];
 
   const changeLanguage = event => {
     const buttonLanguage = event.target.innerText.toLowerCase();
@@ -34,20 +40,29 @@ const Header = () => {
     );
   };
 
+  const renderPagesLinks = () => {
+    return (
+      pagesLinksArray.map((link, index) => {
+        return (
+          <li key={index}>
+            <Link to={link.path}>{t(link.content)}</Link>
+          </li>
+        );
+      })
+    );
+  };
+
   return (
     <header className='header-wrapper'>
+      <ul className='header-pages-list'>
+        {renderPagesLinks()}
+      </ul>
       <div className='header-flex-container'>
-        <ul className='header-pages-list'>
-          <li><Link to='/'>{t('homePage')}</Link></li>
-          <li><Link to='/page1'>{t('page1')}</Link></li>
-          <li><Link to='/page2'>{t('page2')}</Link></li>
-          <li><Link to='/page3'>{t('page3')}</Link></li>
-        </ul>
         <ul className='header-languages-list'>
           {renderLanguageButtons()}
         </ul>
-      </div>
-      <h1 className='header-title'>React App</h1>
+        <h1 className='header-title'>React App</h1>
+      </div>  
     </header>
   );
 };

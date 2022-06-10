@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTheme } from '../../store/toolkitSlice';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import languagesArray from '../../assets/languages';
+import lightTheme from '../../assets/images/light-theme-icon.svg';
+import darkTheme from '../../assets/images/dark-theme-icon.svg';
 import './Header.scss';
 
 const Header = () => {
   const [language, setLanguage] = useState(document.querySelector('html').lang);
   const { t } = useTranslation();
+  const isLight = useSelector(state => state.themeState.isLight);
+  const dispatch = useDispatch();
   const pagesLinksArray = [
     { path: '/', content: 'homePage' },
     { path: '/page1', content: 'page1' },
@@ -52,12 +58,20 @@ const Header = () => {
     );
   };
 
+  const themeHandler = () => {
+    dispatch(changeTheme());
+  };
+
   return (
     <header className='header-wrapper'>
       <ul className='header-pages-list'>
         {renderPagesLinks()}
       </ul>
       <div className='header-flex-container'>
+        <button className='header-theme-button' onClick={themeHandler}>
+          {isLight ? <img src={lightTheme} alt='light theme' /> : 
+          <img src={darkTheme} alt='dark theme' />}
+        </button>          
         <ul className='header-languages-list'>
           {renderLanguageButtons()}
         </ul>

@@ -42,6 +42,7 @@ footer, header, hgroup, menu, nav, section {
 
 a {
     text-decoration: none;
+    color: currentColor;
 }
 
 body {

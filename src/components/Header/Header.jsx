@@ -59,6 +59,14 @@ const Header = () => {
   };
 
   const themeHandler = () => {
+    const body = document.querySelector('body');
+    if (isLight) {
+      body.style.backgroundColor = 'black';
+      body.style.color = 'white';
+    } else {
+      body.style.backgroundColor = 'white';
+      body.style.color = 'black';
+    };
     dispatch(changeTheme());
   };
 

@@ -20,9 +20,21 @@
 
   li {
     display: inline;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: 2rem;
+
+      &::after {
+        content: '';
+        background-color: currentColor;
+        position: absolute;
+        width: 1.5rem;
+        height: 1px;
+        top: 0.7rem;
+        right: -1.6rem;
+        transform: rotate(-60deg);
+      }
     }
 
     a {

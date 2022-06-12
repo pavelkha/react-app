@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../store/toolkitSlice';
+import applyTheme from '../../assets/theme';
+import lightTheme from '../../assets/images/light-theme-icon.svg';
+import darkTheme from '../../assets/images/dark-theme-icon.svg';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 import languagesArray from '../../assets/languages';
-import lightTheme from '../../assets/images/light-theme-icon.svg';
-import darkTheme from '../../assets/images/dark-theme-icon.svg';
 import './Header.scss';
 
 const Header = () => {
@@ -59,15 +60,8 @@ const Header = () => {
   };
 
   const themeHandler = () => {
-    const body = document.querySelector('body');
-    if (isLight) {
-      body.style.backgroundColor = 'black';
-      body.style.color = 'white';
-    } else {
-      body.style.backgroundColor = 'white';
-      body.style.color = 'black';
-    };
     dispatch(changeTheme());
+    applyTheme(!isLight);
   };
 
   return (

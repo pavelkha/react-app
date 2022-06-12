@@ -1,10 +1,10 @@
 @import '../../assets/variables.scss';
 
 .main-wrapper {
-  max-width: $desktop-width;
+  max-width: $max-width;
+  min-height: calc(100vh - #{$header-height});
   margin: 0 auto;
   padding: 0.5rem;
-  background-color: azure;
 }
 
 .main-title {

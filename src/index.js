@@ -7,10 +7,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import languagesArray from './assets/languages';
 import { store } from './store/index';
-import applyTheme from './assets/theme';
 import App from './App';
-
-applyTheme(true);
 
 i18n
   .use(initReactI18next)

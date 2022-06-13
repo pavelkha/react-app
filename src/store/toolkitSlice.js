@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { themeInitialState } from '../assets/theme';
 
 const themeState = createSlice({
   name: 'themeState',
-  initialState: { isLight: true },
+  initialState: { isLight: themeInitialState },
   reducers: {
     changeTheme(state) {
       state.isLight = !state.isLight;

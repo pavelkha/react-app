@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../store/toolkitSlice';
-import applyTheme from '../../assets/theme';
+import { applyTheme } from '../../assets/theme';
 import lightTheme from '../../assets/images/light-theme-icon.svg';
 import darkTheme from '../../assets/images/dark-theme-icon.svg';
 import i18next from 'i18next';
@@ -65,6 +65,7 @@ const Header = () => {
   const themeHandler = () => {
     dispatch(changeTheme());
     applyTheme(!isLight);
+    localStorage.setItem('isLightTheme', `${!isLight}`);
   };
 
   return (

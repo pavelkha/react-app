@@ -11,7 +11,10 @@ import languagesArray from '../../assets/languages';
 import './Header.scss';
 
 const Header = () => {
-  const [language, setLanguage] = useState(document.querySelector('html').lang);
+  const [language, setLanguage] = useState(
+    localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng') :
+    document.querySelector('html').lang
+  );
   const { t } = useTranslation();
   const isLight = useSelector(state => state.themeState.isLight);
   const dispatch = useDispatch();

@@ -20,7 +20,7 @@ i18n
     supportedLngs: languagesArray,
     fallbackLng: 'en',
     detection: {
-      order: ['htmlTag'],
+      order: [ 'localStorage', 'htmlTag'],
     },
     backend: { loadPath: './locales/{{lng}}/translation.json' },
   });

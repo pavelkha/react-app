@@ -10,8 +10,7 @@ const applyTheme = (isLight) => {
   };
 };
 
-const isLightTheme = JSON.parse(localStorage.getItem('isLightTheme'));
 const themeInitialState = 
-isLightTheme === true || isLightTheme === null ? true : false;
+JSON.parse(localStorage.getItem('isLightTheme')) === false ? false : true;
 
 export { applyTheme, themeInitialState };

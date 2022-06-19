@@ -1,12 +1,11 @@
-const applyTheme = (isLight) => {
-  const body = document.querySelector('body').style;
+const applyTheme = isLight => {
   const colors = {
-    '--theme-content-color': `${isLight ? 'black' : 'white'}`,
-    '--theme-background-color': `${isLight ? 'white' : 'black'}`,
+    '--theme-content-color': `${isLight ? '#21252B' : '#FFFFFF'}`,
+    '--theme-background-color': `${isLight ? '#FFFFFF' : '#21252B'}`,
   };
 
   for (const key in colors) {
-    body.setProperty(key, colors[key]);
+    document.querySelector('body').style.setProperty(key, colors[key]);
   };
 };
 

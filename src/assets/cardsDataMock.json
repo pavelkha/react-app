@@ -1,63 +1,63 @@
 [
   {
     "name": "item 1",
-    "category": "category 1",
+    "category": "category1",
     "description": "Integer in libero",
     "cost": "200"
   },
   {
     "name": "item 2",
-    "category": "category 2",
+    "category": "category2",
     "description": "Etiam eu vestibulum",
     "cost": "140",
     "new": ""
   },
   {
     "name": "item 3",
-    "category": "category 3",
+    "category": "category3",
     "description": "Proin augue ligula",
     "cost": "90"
   },
   {
     "name": "item 4",
-    "category": "category 2",
+    "category": "category2",
     "description": "Ut quis diam",
     "cost": "150"
   },
   {
     "name": "item 5",
-    "category": "category 3",
+    "category": "category3",
     "description": "Pellentesque viverra tincidunt",
     "cost": "145",
     "new": ""
   },
   {
     "name": "item 6",
-    "category": "category 1",
+    "category": "category1",
     "description": "Vestibulum sed luctu",
     "cost": "100"
   },
   {
     "name": "item 7",
-    "category": "category 3",
+    "category": "category3",
     "description": "Vestibulum non odio",
     "cost": "170"
   },
   {
     "name": "item 8",
-    "category": "category 3",
+    "category": "category3",
     "description": "Ut congue semper",
     "cost": "110"
   },
   {
     "name": "item 9",
-    "category": "category 2",
+    "category": "category2",
     "description": "Praesent et egestas",
     "cost": "230"
   },
   {
     "name": "item 10",
-    "category": "category 3",
+    "category": "category3",
     "description": "Sed pretium quam",
     "cost": "205",
     "new": ""

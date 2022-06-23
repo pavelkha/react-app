@@ -1,5 +1,40 @@
 @import '../../../assets/variables.scss';
 
+.page1-sort {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.page1-sort-list {
+  margin-bottom: 2rem;
+
+  li {
+    display: inline;
+
+    button {
+      padding: 0.3rem 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      color: $gray-1;
+      background-color: $blue-1;
+      transition: 0.8s;
+
+      &:hover {
+        color: $blue-1;
+        background-color: $gray-1;
+        transition: 0.8s;
+      }
+    }
+
+    .page1-selected-sort-button {
+      color: $blue-1;
+      background-color: $gray-1;
+    }
+  }
+}
+
 .page1-cards-list {
   display: flex;
   justify-content: flex-start;

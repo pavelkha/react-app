@@ -12,18 +12,12 @@ import './Header.scss';
 
 const Header = () => {
   const [language, setLanguage] = useState(
-    localStorage.getItem('i18nextLng') ? localStorage.getItem('i18nextLng') :
-    document.querySelector('html').lang
+    localStorage.getItem('i18nextLng') ? 
+    localStorage.getItem('i18nextLng') : document.querySelector('html').lang
   );
-  const { t } = useTranslation();
   const isLight = useSelector(state => state.themeState.isLight);
+  const { t } = useTranslation();
   const dispatch = useDispatch();
-  const pagesLinksArray = [
-    { path: '/', content: 'homePage' },
-    { path: '/page1', content: 'page1' },
-    { path: '/page2', content: 'page2' },
-    { path: '/page3', content: 'page3' },
-  ];
 
   const changeLanguage = event => {
     const buttonLanguage = event.target.innerText.toLowerCase();
@@ -51,6 +45,12 @@ const Header = () => {
   };
 
   const renderPagesLinks = () => {
+    const pagesLinksArray = [
+      { path: '/', content: 'homePage' },
+      { path: '/page1', content: 'page1' },
+      { path: '/page2', content: 'page2' },
+      { path: '/page3', content: 'page3' },
+    ];
     return (
       pagesLinksArray.map((link, index) => {
         return (
@@ -65,7 +65,7 @@ const Header = () => {
   const themeHandler = () => {
     dispatch(changeTheme());
     applyTheme(!isLight);
-    localStorage.setItem('isLightTheme', `${!isLight}`);
+    localStorage.setItem('isLightTheme', JSON.stringify(!isLight));
   };
 
   return (

@@ -1,0 +1,112 @@
+@import '../../../../assets/variables.scss';
+
+.item-popup-window-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: var(--popup-theme-color);
+}
+
+.item-popup-window-wrapper {
+  border: none;
+  width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50% , -50%);
+  color: $white;
+  background-color: $blue-2;
+}
+
+.item-popup-close-window-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  color: $white;
+  background-color: $blue-1;
+
+  &::after {
+    content: '×';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.3rem;
+    color: inherit;
+    background-color: inherit;
+  }
+
+  &:hover {
+    background-color: $blue-3;
+  }
+}
+
+.item-popup-card-info-container {
+  display: flex;
+}
+
+.item-popup-card-fake-image {
+  width: 400px;
+  height: 400px;
+  background-color: $blue-1;
+}
+
+.item-popup-card-text-info {
+  width: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-popup-card-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.item-popup-card-cost-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-popup-card-cost {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.item-popup-ordering-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+.item-popup-count-button {
+  font-size: 1.4rem;
+  border: none;
+  padding: 0 0.5rem;
+  color: $white;
+  background-color: inherit;
+}
+
+.item-popup-to-cart-button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem 0.7rem;
+  margin-top: 0.3rem;
+  color: $white;
+  background-color: $blue-3;
+
+  &:hover {
+    background-color: $blue-1;
+  }
+}

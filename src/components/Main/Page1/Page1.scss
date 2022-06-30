@@ -27,12 +27,12 @@
         transition: 0.8s;
       }
     }
-
-    .page1-selected-sort-button {
-      color: $blue-1;
-      background-color: $gray-1;
-    }
   }
+}
+
+.page1-selected-sort-button {
+  color: $blue-1;
+  background-color: $gray-1;
 }
 
 .page1-cards-list {
@@ -45,82 +45,83 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2.75rem;
+  }
+}
 
-    .page1-card-container {
-      border-radius: 23px;
+.page1-card-container {
+  border-radius: 23px;
+  background-color: $gray-1;
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 5px $blue-3;
+    transition: 0.5s;
+  }
+}
+
+.page1-card-fake-image {
+  width: 250px;
+  height: 250px;
+  background-color: $blue-1;
+  border-radius: 20px 20px 0 0;
+}
+
+.fake-image-pseudo-element {
+  position: relative;
+
+  &::after {
+    content: 'new';
+    width: 40px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    color: $black;
+    background-color: $gray-2;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 18px 0;
+    padding: 0.2rem;
+  }
+}
+
+.page1-card-text-content-container {
+  padding: 1.2rem 0 0 0.7rem;
+  color: $black;
+}
+
+.page1-card-name {
+  border: none;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  color: $blue-1;
+}
+
+.page1-card-description {
+  margin: 0.5rem 0 1rem;
+}
+
+.page1-card-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  button {
+    border: none;
+    border-radius: 20px 0;
+    padding: 0.6rem;
+    background-color: $blue-2;
+    color: $white;
+    transition: 0.8s;
+
+    &:hover {
       background-color: $gray-1;
-      transition: 0.5s;
-
-      &:hover {
-        box-shadow: 0px 0px 20px 5px $blue-3;
-        transition: 0.5s;
-      }
-
-      .page1-card-fake-image {
-        width: 250px;
-        height: 250px;
-        background-color: $blue-1;
-        border-radius: 20px 20px 0 0;
-      }
-
-      .fake-image-pseudo-element {
-        position: relative;
-
-        &::after {
-          content: 'new';
-          width: 40px;
-          height: 15px;
-          position: absolute;
-          top: 0;
-          color: $black;
-          background-color: $gray-2;
-          font-weight: bold;
-          font-size: 0.9rem;
-          text-align: center;
-          border-radius: 18px 0;
-          padding: 0.2rem;
-        }
-      }
-
-      .page1-card-text-content-container {
-        padding: 1.2rem 0 0 0.7rem;
-        color: $black;
-
-        a {
-          font-size: 1.5rem;
-          text-decoration: underline;
-          color: $blue-1;
-        }
-  
-        .page1-card-description {
-          margin: 0.5rem 0 1rem;
-        }
-  
-        .page1-card-flex-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          span {
-            font-size: 1.5rem;
-          }
-
-          button {
-            border: none;
-            border-radius: 20px 0;
-            padding: 0.6rem;
-            background-color: $blue-2;
-            color: $white;
-            transition: 0.8s;
-
-            &:hover {
-              background-color: $gray-1;
-              color: $blue-1;
-              transition: 0.8s;
-            }
-          }
-        }
-      }
+      color: $blue-1;
+      transition: 0.8s;
     }
   }
 }

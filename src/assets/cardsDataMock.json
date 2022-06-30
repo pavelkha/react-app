@@ -1,64 +1,84 @@
 [
   {
+    "id": "IRse0ptV",
     "name": "item 1",
     "category": "category1",
     "description": "Integer in libero",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "200"
   },
   {
+    "id": "eAj9Jgp7",
     "name": "item 2",
     "category": "category2",
     "description": "Etiam eu vestibulum",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "140",
     "new": ""
   },
   {
+    "id": "G2npP5Mw",
     "name": "item 3",
     "category": "category3",
     "description": "Proin augue ligula",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "90"
   },
   {
+    "id": "QcYZLKeM",
     "name": "item 4",
     "category": "category2",
     "description": "Ut quis diam",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "150"
   },
   {
+    "id": "XbxAE0vW",
     "name": "item 5",
     "category": "category3",
     "description": "Pellentesque viverra tincidunt",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "145",
     "new": ""
   },
   {
+    "id": "7rzTx9gK",
     "name": "item 6",
     "category": "category1",
     "description": "Vestibulum sed luctu",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "100"
   },
   {
+    "id": "elqBgfSc",
     "name": "item 7",
     "category": "category3",
     "description": "Vestibulum non odio",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "170"
   },
   {
+    "id": "jp21aHi4",
     "name": "item 8",
     "category": "category3",
     "description": "Ut congue semper",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "110"
   },
   {
+    "id": "rByJVoan",
     "name": "item 9",
     "category": "category2",
     "description": "Praesent et egestas",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "230"
   },
   {
+    "id": "IK40WUdN",
     "name": "item 10",
     "category": "category3",
     "description": "Sed pretium quam",
+    "longDescription": "Proin ornare fringilla eros congue posuere. Aliquam erat volutpat. Cras ut tortor eros. Phasellus aliquet semper nibh, et vulputate ligula imperdiet a. Vestibulum non odio massa. Cras congue, felis nec vestibulum consequat, nunc lorem suscipit elit, a gravida libero metus et odio. Morbi suscipit tellus in purus pretium efficitur. Quisque.",
     "cost": "205",
     "new": ""
   }

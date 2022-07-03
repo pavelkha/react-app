@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import cardsDataArray from '../../../../assets/cardsDataMock.json';
 import './Items.scss';
 
-const Items = ({ setItemId }) => {
+const Items = ({ setItemId, cartIdArray, setCartIdArray }) => {
   const [selectedSort, setSelectedSort] = useState(
     JSON.parse(localStorage.getItem('selectedSort')) ? 
     JSON.parse(localStorage.getItem('selectedSort')) : 'all'  
@@ -34,7 +34,7 @@ const Items = ({ setItemId }) => {
                 <div className='items-card-description'>{card.description}</div>
                 <div className='items-card-flex-container'>
                   <span>${card.cost}</span>
-                  <button>{t('toCart')}</button>
+                  <button id={card.id} onClick={addToCart}>{t('toCart')}</button>
                 </div>
               </div>
             </div>
@@ -42,6 +42,20 @@ const Items = ({ setItemId }) => {
         );
       })
     );
+  };
+  
+  const addToCart = ({ target: { id } }) => {
+    let newCartIdArray = [...cartIdArray];
+    if (cartIdArray.some(card => card.itemId === id)) {
+      const cardIndex = cartIdArray.findIndex(card => card.itemId === id);
+      let cardCount = cartIdArray[cardIndex].itemCount;
+      newCartIdArray[cardIndex].itemCount = ++cardCount;
+    } 
+    else { 
+      newCartIdArray.push({ "itemId": id, "itemCount": 1 });
+    };
+    setCartIdArray(newCartIdArray);
+    localStorage.setItem('cartIdArray', JSON.stringify(newCartIdArray));
   };
 
   const renderSortList = () => {

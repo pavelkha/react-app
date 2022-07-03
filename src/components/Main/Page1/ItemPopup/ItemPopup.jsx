@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import cardsDataArray from '../../../../assets/cardsDataMock.json';
 import './ItemPopup.scss';
 
-const ItemPopup = ({ itemId, closePopup }) => {
+const ItemPopup = ({ itemId, closePopup, cartIdArray, setCartIdArray }) => {
   const [itemCount, setItemCount] = useState(1);
   const [itemCost, setItemCost] = useState(0);
+  const { t } = useTranslation();
 
   if (!itemId) { return null };
 
@@ -35,6 +37,22 @@ const ItemPopup = ({ itemId, closePopup }) => {
     closePopup();
   };
 
+  const addToCart = () => {
+    let newCartIdArray = [...cartIdArray];
+    if (cartIdArray.some(card => card.itemId === item.id)) {
+      const cardIndex = cartIdArray.findIndex(card => card.itemId === item.id);
+      const cardCount = cartIdArray[cardIndex].itemCount;
+      newCartIdArray[cardIndex].itemCount = cardCount + itemCount;
+    } 
+    else { 
+      newCartIdArray.push({ "itemId": item.id, "itemCount": itemCount });
+    };
+    setCartIdArray(newCartIdArray);
+    setItemCost(Number(item.cost));
+    setItemCount(1);
+    localStorage.setItem('cartIdArray', JSON.stringify(newCartIdArray));
+  };
+
   return (
     <div className='item-popup-window-overlay'>
       <div className='item-popup-window-wrapper'>
@@ -60,7 +78,9 @@ const ItemPopup = ({ itemId, closePopup }) => {
                     +
                   </button>
                 </div>
-                <button className='item-popup-to-cart-button'>to cart</button>
+                <button className='item-popup-to-cart-button' onClick={addToCart}>
+                  {t('toCart')}
+                </button>
               </div>
             </div>
           </div>
